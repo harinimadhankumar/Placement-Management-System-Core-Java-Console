@@ -1,0 +1,23 @@
+# Compiled class files
+bin/
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+*.classpath
+*.project
+.settings/
+
+# Environment variables (contains sensitive data)
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# MySQL JDBC driver (download separately)
+# lib/*.jar

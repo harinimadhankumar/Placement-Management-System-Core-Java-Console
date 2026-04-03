@@ -1,0 +1,63 @@
+================================================================================
+                    PLACEMENT MANAGEMENT SYSTEM - QUICKSTART
+================================================================================
+
+Follow these steps to run the application:
+
+================================================================================
+STEP 1: Start MySQL Server
+================================================================================
+
+Make sure MySQL is running on your system.
+
+================================================================================
+STEP 2: Create Database
+================================================================================
+
+Open MySQL command line or workbench and run:
+
+   CREATE DATABASE placement_management;
+
+(Tables will be created automatically by the application)
+
+================================================================================
+STEP 3: Configure Database Connection
+================================================================================
+
+Edit the .env file with your MySQL credentials:
+
+   DB_HOST=localhost
+   DB_PORT=3306
+   DB_NAME=placement_management
+   DB_USER=root
+   DB_PASSWORD=your_password
+
+================================================================================
+STEP 4: Run the Application
+================================================================================
+
+Option A: Double-click run.bat
+
+Option B: Run from IDE
+   - Open in VS Code or IntelliJ
+   - Run main.PlacementSystem
+
+Option C: Command line
+   javac -d bin -sourcepath src -cp "lib\mysql-connector-j-8.0.33.jar" src\main\PlacementSystem.java
+   java -cp "bin;lib\mysql-connector-j-8.0.33.jar" main.PlacementSystem
+
+================================================================================
+USAGE:
+================================================================================
+
+Main Menu:
+1. Student Management - Add/View/Update/Delete students
+2. Company Management - Add/View/Update/Delete companies
+3. Placement Management - Record student placements
+4. Display All Placement Details - View all placements
+5. Searching & Sorting Page - Search and sort students
+6. Shortlist Students for Company - Filter students for companies
+7. View Student Profile From Placement - View student details
+8. Exit
+
+================================================================================

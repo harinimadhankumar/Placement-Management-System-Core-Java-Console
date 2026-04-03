@@ -1,0 +1,93 @@
+================================================================================
+              PLACEMENT MANAGEMENT SYSTEM - SAMPLE DATA
+================================================================================
+
+This file contains sample data for testing the system.
+Data is stored in MySQL database (placement_management).
+
+================================================================================
+SAMPLE STUDENTS:
+================================================================================
+
+Student 1:
+  Name: Dhinakaran C
+  Register Number: 714023104020
+  Department: CSE
+  CGPA: 8.48
+  Year: III
+  Batch: 2023-2027
+  Projects: 2
+    Project 1: Gramconnect | Smart Village Management And Civic Reporting System | Mobile App Development | Flutter, Java-SpringBoot, MongoDB
+    Project 2: RoomAura | Room Interior Design Online Purchasing And Setup Platform | Web Development | MERN Stack
+
+
+================================================================================
+SAMPLE COMPANIES:
+================================================================================
+
+Company 1:
+  Name: Zoho
+  Eligible CGPA: 7.5
+  Job Role: Full Stack Developer
+  Drive Date: 08-12-2025
+
+
+================================================================================
+SAMPLE PLACEMENT RECORDS:
+================================================================================
+
+Placement 1:
+  Register Number: 714023104020
+  Name: Dhinakaran C
+  Department: CSE
+  Batch: 2023-2027
+  Company Name: Zoho
+  Salary Package: 24.0 LPA
+
+
+================================================================================
+RAW FORMAT (Data in text files):
+================================================================================
+
+students.txt:
+-------------
+Dhinakaran C|714023104020|CSE|8.48|III|2023-2027|Gramconnect~Smart Village Management And Civic Reporting System~Mobile App Development~Flutter, Java-SpringBoot, MongoDB;RoomAura~Room Interior Design Online Purchasing And Setup Platform~Web Development~MERN Stack
+
+companies.txt:
+--------------
+Zoho|7.5|Full Stack Developer|08-12-2025
+
+placements.txt:
+---------------
+714023104020|Dhinakaran C|CSE|2023-2027|Zoho|24.0
+
+
+================================================================================
+DATA FORMAT:
+================================================================================
+
+- Register numbers are unique identifiers
+- CGPA values are decimals (0.0 to 10.0)
+- Salary packages are in LPA (Lakhs Per Annum)
+- Technologies are comma-separated strings
+- File format uses | (pipe) for field separation and ~ (tilde) for project fields
+- Multiple projects are separated by ; (semicolon)
+
+
+================================================================================
+DATABASE TABLES:
+================================================================================
+
+students:
+  - id, name, register_number, department, cgpa, year, batch
+
+projects:
+  - id, student_register_number, title, description, domain, technologies
+
+companies:
+  - id, name, eligible_cgpa, job_role, drive_date
+
+placements:
+  - id, register_number, name, department, batch, company_name, salary_package
+
+================================================================================
